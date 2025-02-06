@@ -1,0 +1,11 @@
+
+{"imports": {
+    "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js",
+    "react": "https://cdn.jsdelivr.net/npm/react@18.0.0/umd/react.production.min.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.0.0/umd/react-dom.production.min.js",
+    "react-bootstrap": "https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js",
+    "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3/system/es2015/rxjs.min.js",
+    "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs@6.6.3/system/es2015/rxjs-operators.min.js",
+    "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js",
+    "@redbee/seed": "http://localhost:8081/redbee-seed.bundle.js"
+}}

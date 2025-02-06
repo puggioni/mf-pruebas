@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ui-seed-extbo
+spec:
+  selector:
+    app: ui-seed-extbo
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80

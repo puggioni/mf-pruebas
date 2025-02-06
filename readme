@@ -1,0 +1,16 @@
+MONOLITO-> my-react-app es un root construido como una app de react
+y que luego se adapto para injectarle microfrontends con single-spa.
+
+ui-container root template single-spa.
+
+ui-login, ui-seed son microfrontends.
+
+leventar proyecto
+
+1. nmp install
+2. npm run build
+3. npm run start
+
+--- problema detectado en my-react-app con System al usar en .js
+por ende solo se debe agregar desde el html. en lo que se investiga la causa
+del problema del error, se intuye incompatibilidad con versiones.

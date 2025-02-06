@@ -1,0 +1,6 @@
+FROM williamyeh/json-server
+
+COPY . /app
+WORKDIR /app
+EXPOSE 4000
+ENTRYPOINT ["json-server", "--watch", "src/app/mocks/db.json", "--routes", "src/app/mocks/routes.json", "--port", "4000", "--no-cors"]

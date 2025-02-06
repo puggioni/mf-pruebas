@@ -1,0 +1,2 @@
+#!/usr/bin/env groovy
+pipelinebitbucketfrontmap('ui-seed-extbo', 'microservicios')

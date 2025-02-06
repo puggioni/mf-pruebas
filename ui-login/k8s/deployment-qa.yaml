@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-seed-extbo
+spec:
+  selector:
+    matchLabels:
+      app: ui-seed-extbo
+  template:
+    metadata:
+      labels:
+        app: ui-seed-extbo
+    spec:
+      containers:
+      - name: ui-seed-extbo
+        image: IMAGE_PATTERN
+        imagePullPolicy: Always
+        env:
+        - name: NODE_ENV
+          value: "development"
+        ports:
+        - name: http
+          containerPort: 80
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            port: http
+            path: /health
+          initialDelaySeconds: 60
+          periodSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            port: http
+            path: /health
+          initialDelaySeconds: 60
+          periodSeconds: 5
+          failureThreshold: 3
