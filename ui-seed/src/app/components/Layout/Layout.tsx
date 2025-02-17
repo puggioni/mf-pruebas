@@ -1,21 +1,23 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import routes from '../../routes/routes'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "../../routes/routes";
+import Navbar from "../Navigation/Navbar";
 
-export default () => {
+const Layout: React.FC = () => {
   return (
-    <div className='app__content'>
-      <div className='content'>
-        <h1>HELLO MF SEED</h1>
-        <BrowserRouter>
+    <div className="min-h-screen bg-gray-50">
+      <BrowserRouter basename="/seed">
+        <Navbar />
+        <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <Routes>
-            {routes.map((route) => {
-              { console.log(route) }
-              return <Route key={route.path} {...route} />
-            })}
+            {routes.map((route) => (
+              <Route key={route.path} {...route} />
+            ))}
           </Routes>
-
-        </BrowserRouter>
-      </div>
+        </main>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
+
+export default Layout;

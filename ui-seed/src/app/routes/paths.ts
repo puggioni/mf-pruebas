@@ -1,9 +1,15 @@
-const ROOT = '/seed'
+// Rutas relativas al basename configurado en BrowserRouter
 export const Paths = {
-  index: ROOT,
-  health: {
-    index: `${ROOT}/health`
+  home: {
+    index: "/",
   },
-
-
-}
+  about: {
+    index: "/about",
+  },
+  features: {
+    index: "/features",
+  },
+  health: {
+    index: "/health",
+  },
+} as const;
